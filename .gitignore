@@ -1,0 +1,137 @@
+# ============================================================
+# IntegratedPlatform - 核心平台 (backend + frontend) 专用忽略规则
+# 仅保留项目源码与轻量文档，排除一切临时/调试/产物/大数据
+# ============================================================
+
+# ---------- 依赖与构建产物 ----------
+node_modules/
+dist/
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# ---------- Python 运行时 ----------
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+
+# ---------- 数据库文件 ----------
+*.db
+*.sqlite
+*.sqlite3
+
+# ---------- 环境与密钥 ----------
+.env
+.env.local
+.env.*.local
+.env.production
+
+# ---------- 日志 ----------
+*.log
+app.log*
+
+# ---------- IDE / 开发工具 ----------
+.vscode/
+.idea/
+.codegraph/
+.trae/
+.superpowers/
+.pytest_cache/
+.worktrees/
+/.dbg/
+
+# ---------- 非核心子系统（本项目只保留 backend + frontend） ----------
+/lab_system/
+/monitor_server/
+/toolbox/
+/static/
+/沥青/
+/历史会话归档/
+/artifacts/
+
+# ---------- 二进制工具 ----------
+/codegraph-win32-x64/
+
+# ---------- 大文件：手册/上传附件 ----------
+/backend/static/manuals/
+/backend/static/uploads/
+/backend/uploads/
+
+# ---------- 根目录一次性脚本 ----------
+/add_columns.py
+/call_api.py
+/check_*.py
+/cleanup*.py
+/extract*.py
+/fix*.py
+/migrate*.py
+/probe_surface2.py
+/scan_pdf.py
+/test*.py
+/trigger_impact.py
+/verify_*.py
+/debug-*.md
+
+# ---------- 根目录临时数据 ----------
+/f_series_data.json
+/f_series_extracted.json
+/fm_configs.json
+/pdf_sample.txt
+/out.txt
+/app.log
+/temp_*.png
+/verify_curve_backup.json
+/日结_20260802.md
+
+# ---------- backend 一次性脚本 / 导出数据 ----------
+/backend/analyze_pdf.py
+/backend/cleanup.py
+/backend/clear_f_series.py
+/backend/debug_blocks.py
+/backend/extract_*.py
+/backend/export_motor_docs.py
+/backend/fix_database.py
+/backend/generate_f37_json.py
+/backend/import_*.py
+/backend/organize_motors.py
+/backend/parse_motor_txt.py
+/backend/rebuild_*.py
+/backend/remove_duplicates*.py
+/backend/seed_example_formulas.py
+/backend/update_*.py
+/backend/tmp_*.py
+/backend/test_*.py
+/backend/*.json
+/backend/*.txt
+/backend/*.log
+/backend/app.db
+/backend/test.db
+/backend/workbench_model1_backup_*.json
+/backend/package-lock.json
+!/backend/requirements.txt
+!/backend/requirements*.txt
+
+# ---------- frontend 一次性文件 ----------
+/frontend/migrate_db*.js
+/frontend/test_bug.mjs
+/frontend/build-*.log
+/frontend/build-output*.log
+/frontend/2026-07-20-workbench-optimization-summary.md
+
+# ---------- 文档中的 AI 会话/归档 ----------
+/docs/superpowers/
+
+# ---------- Windows ----------
+.DS_Store
+Thumbs.db
+~$*.xlsx
+~$*.xls
+~$*.pptx
+~$*.docx
