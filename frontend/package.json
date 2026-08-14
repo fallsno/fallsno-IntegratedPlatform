@@ -1,0 +1,26 @@
+{
+  "name": "model-management-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3000 --strictPort"
+  },
+  "dependencies": {
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5",
+    "axios": "^1.6.2",
+    "element-plus": "^2.4.2",
+    "mathjs": "^12.4.1",
+    "xlsx": "^0.18.5",
+    "echarts": "^5.4.3",
+    "@element-plus/icons-vue": "^2.1.0",
+    "sortablejs": "^1.15.0",
+    "vuedraggable": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.0",
+    "vite": "^4.5.0"
+  }
+}
